@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+    ingenieria-web:
+        container_name: ingenieria-web
+        build: .
+        ports:
+            - "85:80"
+        volumes:
+            - ${PROJECTFOLDER}:/var/www/ingenieria
+            - ${PUBLICFOLDER}:/var/www/html
+networks: 
+  default: 
+    name: ingenieria 
+    external: true
