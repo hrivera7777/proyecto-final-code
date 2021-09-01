@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CantidadesCacao;
+use App\Http\Controllers\RetiroInventario;
+use App\Http\Controllers\ChocolateProducido;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,16 +24,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/cantidadesCacao', function () {
-    return view('cantidadesCacao');
-});
+Route::get('/cantidadesCacao', [CantidadesCacao::class, 'show']);
 
-Route::get('/chocolateProducido', function () {
-    return view('chocolateProducido');
-});
+Route::get('/chocolateProducido',[ChocolateProducido::class, 'show'] );
 
-Route::get('/retiroInventario', function () {
-    return view('retiroInventario');
-});
+Route::get('/retiroInventario',[RetiroInventario::class, 'show']);
 
 
