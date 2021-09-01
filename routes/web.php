@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/cantidadesCacao', function () {
+    return view('cantidadesCacao');
+});
+
+Route::get('/chocolateProducido', function () {
+    return view('chocolateProducido');
+});
+
+Route::get('/retiroInventario', function () {
+    return view('retiroInventario');
+});
+
+
