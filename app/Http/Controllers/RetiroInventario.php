@@ -22,7 +22,15 @@ class RetiroInventario extends Controller
         return view('retiroInventario',['datosInv'=>$inventario,'datosSumi'=>$suministrosCompletos]);
     }
 
-    public function retirar(Request $request){
-        return view();
+    public function retirarSuministro(Request $request){
+        //dd($request->input('inputCantidades'));
+        $inventario = InventarioSuministro::where('id',$request->input('inputIdInven'))->first();
+        if ($inventario->cantidades > $request->input('inputCantidades')){
+            $inventario->cantidades = $inventario->cantidades - $request->input('inputCantidades');
+        }
+        
+        $inventario->save();
+
+        return view('succesful');
     }
 }

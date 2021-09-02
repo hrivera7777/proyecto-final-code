@@ -28,6 +28,8 @@ Route::get('/cantidadesCacao', [CantidadesCacao::class, 'show']);
 
 Route::get('/chocolateProducido',[ChocolateProducido::class, 'show'] );
 
-Route::get('/retiroInventario',[RetiroInventario::class, 'show']);
+Route::get('/retiroInventario',[RetiroInventario::class, 'show'])->name('retiro');
+
+Route::get('/succesful', [RetiroInventario::class,'retirarSuministro'])->name('retiroCompleto');
 
 
