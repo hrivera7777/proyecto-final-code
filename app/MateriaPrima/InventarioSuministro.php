@@ -13,4 +13,42 @@ class InventarioSuministro extends Model
     {
         return $this->belongsTo(Sumnistro::class);
     }
+
+    public function ingresarPedido()
+    {
+        # code...
+        return;
+    }
+
+    public function retirarSuministro()
+    {
+        # code...
+        return;
+    }
+
+    public function notificacionEscases()
+    {
+        # code...
+        return;
+    }
+
+    public function ingresarSuministro()
+    {
+        # code...
+        return;
+    }
+
+    public function modificarSuministro()
+    {
+        # code...
+        return;
+    }
+
+    public function consultarSuministro()
+    {
+        # code...
+        return;
+    }
+
+
 }

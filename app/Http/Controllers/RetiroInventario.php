@@ -17,15 +17,13 @@ class RetiroInventario extends Controller
             $suministro =Suministro::find($inv->id_suministro);
             array_push($suministrosCompletos,$suministro);
         }
-        
-        //dd($inventarioCompleto);           
+                
         return view('retiroInventario',['datosInv'=>$inventario,'datosSumi'=>$suministrosCompletos]);
     }
 
     public function retirarSuministro(Request $request){
-        //dd($request->input('inputCantidades'));
         $inventario = InventarioSuministro::where('id',$request->input('inputIdInven'))->first();
-        if ($inventario->cantidades > $request->input('inputCantidades')){
+        if ($inventario->cantidades > $request->input('inputCantidades') and $request->input('inputCantidades')>0){
             $inventario->cantidades = $inventario->cantidades - $request->input('inputCantidades');
         }
         

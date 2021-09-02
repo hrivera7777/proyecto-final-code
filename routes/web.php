@@ -24,12 +24,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/cantidadesCacao', [CantidadesCacao::class, 'show']);
 
-Route::get('/chocolateProducido',[ChocolateProducido::class, 'show'] );
 
 Route::get('/retiroInventario',[RetiroInventario::class, 'show'])->name('retiro');
+Route::get('/succesfulRetiro', [RetiroInventario::class,'retirarSuministro'])->name('retiroCompleto');
 
-Route::get('/succesful', [RetiroInventario::class,'retirarSuministro'])->name('retiroCompleto');
+Route::get('/cantidadesCacao', [CantidadesCacao::class, 'show'])->name('cantidadesCacao');
+Route::get('/verificarCedulaRecolector', [CantidadesCacao::class, 'verificarCedula'])->name('verificarCedula');
+Route::get('/ingresoCantCacao', [CantidadesCacao::class,'ingresoCantidadCacao'])->name('ingresoCantidadCacao');
 
-
+Route::get('/chocolateProducido',[ChocolateProducido::class, 'show'] );

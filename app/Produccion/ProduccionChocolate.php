@@ -13,4 +13,22 @@ class ProduccionChocolate extends Model
     {
         return $this->hasMany(Chocolate::class);
     }
+
+    public function produccion()
+    {
+        # code...
+        return;
+    }
+
+    public function alarma()
+    {
+        # code...
+        return;
+    }
+
+    public function finalizarProceso()
+    {
+        # code...
+        return;
+    }
 }

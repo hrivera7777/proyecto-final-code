@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Personal;
-
-use Persona;
+use App\Personal\Persona;
 
 
 class Empleado extends Persona
 {
-    //
+    protected $fecha_nacimiento;
 }
