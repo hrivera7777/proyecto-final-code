@@ -19,5 +19,5 @@ class Recoleccion extends Model
         # code...
         return;
     }
-    
+
 }

@@ -33,4 +33,6 @@ Route::get('/cantidadesCacao', [CantidadesCacao::class, 'show'])->name('cantidad
 Route::get('/verificarCedulaRecolector', [CantidadesCacao::class, 'verificarCedula'])->name('verificarCedula');
 Route::get('/ingresoCantCacao', [CantidadesCacao::class,'ingresoCantidadCacao'])->name('ingresoCantidadCacao');
 
-Route::get('/chocolateProducido',[ChocolateProducido::class, 'show'] );
+Route::get('/chocolateProducido',[ChocolateProducido::class, 'show'] )->name('chocolateProduc');
+Route::get('/verificarCedulaOperario', [ChocolateProducido::class, 'verificarCedula'])->name('verificarCedulaOperario');
+Route::get('/ingresoChocolateProd', [ChocolateProducido::class,'ingresoChocolateProd'])->name('ingresoChocolateProd');

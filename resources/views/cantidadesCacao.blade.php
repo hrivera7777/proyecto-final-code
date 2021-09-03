@@ -15,7 +15,7 @@
                                 @csrf 
                                 <div class="form-floating mb-3">
                                     <input type="number" class="form-control" name="inputCedula" id="inputCedula"
-                                        placeholder="Cédula Empleado">
+                                       min="0" placeholder="Cédula Empleado">
                                     <label for="inputCedula">Cédula Empleado</label>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
